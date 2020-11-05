@@ -23,15 +23,12 @@ const HomePage = () => {
             Descubra os melhores restaurantes em sua cidade
           </p>
         </div>
-        <div className={classes.divSearch}>
-          <div
-            style={{
-              background: '#fff',
-            }}>
+        <div className={classes.searchBtn}>
+          <div className={classes.divSearch}>
             <Search setSearchCity={setSearchCity} />
           </div>
+          <Button />
         </div>
-        <Button />
       </div>
     </div>
   );

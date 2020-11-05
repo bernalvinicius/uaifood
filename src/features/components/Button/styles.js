@@ -8,5 +8,6 @@ export const useStyles = makeStyles({
     fontFamily: 'Open Sans, sans-serif',
     borderRadius: 0,
     padding: '0 40px',
+    height: '100%',
   },
 });

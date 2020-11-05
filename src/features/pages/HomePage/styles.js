@@ -9,6 +9,13 @@ export const useStyles = makeStyles({
     height: '100%',
     overflow: 'hidden',
     minHeight: '100vh',
+
+    '@media (min-width: 960px)': {
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
   },
   content: {
     height: '100vh',
@@ -17,6 +24,11 @@ export const useStyles = makeStyles({
     justifyContent: 'space-evenly',
     alignItems: 'center',
     padding: '0 20px',
+
+    '@media (min-width: 960px)': {
+      width: '100%',
+      maxWidth: '900px',
+    },
   },
   logoDiv: {
     display: 'flex',
@@ -40,11 +52,36 @@ export const useStyles = makeStyles({
     margin: 0,
     padding: 0,
     color: '#fff',
-    fontSize: '20px',
+    fontSize: '35px',
     fontWeight: '800',
     textAlign: 'initial',
+
+    '@media (min-width: 576px)': {
+      fontSize: '49px',
+    },
+
+    '@media (min-width: 960px)': {
+      fontSize: '60px',
+    },
+  },
+  searchBtn: {
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+
+    '@media (min-width: 576px)': {
+      flexDirection: 'row',
+    },
   },
   divSearch: {
     width: '100%',
+    background: '#fff',
+    marginBottom: '20px',
+
+    '@media (min-width: 576px)': {
+      margin: '0 20px 0 0',
+    },
   },
 });
