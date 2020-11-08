@@ -20,6 +20,7 @@ export const useStyles = makeStyles({
     color: '#767676',
     fontSize: '24px',
     fontWeight: 300,
+    height: '30px',
   },
   inputLabel: {
     color: '#767676',

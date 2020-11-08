@@ -20,7 +20,6 @@ export const useStyles = makeStyles((theme) => ({
     zIndex: 10000,
   },
   menuButton: {
-    marginRight: theme.spacing(2),
     [theme.breakpoints.up('md')]: {
       display: 'none',
     },
@@ -41,4 +40,18 @@ export const useStyles = makeStyles((theme) => ({
     fontWeight: 300,
     fontSize: '24px',
   },
+  logoDiv: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 'min-content',
+    width: '100%',
+    maxWidth: '70px',
+  },
+  logo: {
+    width: '100%',
+  },
+  divSearch: {},
+  search: {},
 }));

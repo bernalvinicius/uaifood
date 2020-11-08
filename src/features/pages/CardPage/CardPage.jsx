@@ -3,14 +3,15 @@ import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
 import IconButton from '@material-ui/core/IconButton';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import { useTheme } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
+import logoRed from '../../../assets/images/logo-red.jpg';
+import DrawerComponent from '../../components/DrawerComponent';
+import Search from '../../components/Search';
 // import Card from './components/Card';
-// import DrawerComponent from './components/Drawer';
 import { useStyles } from './styles';
 
 const CardPage = (props) => {
@@ -39,7 +40,12 @@ const CardPage = (props) => {
             className={classes.menuButton}>
             <MenuIcon />
           </IconButton>
-          <Typography className={classes.toolbarTitle}>UAI FOOD</Typography>
+          <div className={classes.logoDiv}>
+            <img className={classes.logo} src={logoRed} alt="uaifood" />
+          </div>
+          <div className={classes.divSearch}>
+            <Search className={classes.search} />
+          </div>
         </Toolbar>
       </AppBar>
       <nav className={classes.drawer} aria-label="mailbox folders">
@@ -56,11 +62,10 @@ const CardPage = (props) => {
             ModalProps={{
               keepMounted: true,
             }}>
-            {/* <DrawerComponent
-              activeFilter={activeFilter}
-              setActiveFilter={setActiveFilter}
-            /> */}
-            <p>DRAWER</p>
+            <DrawerComponent
+            // activeFilter={activeFilter}
+            // setActiveFilter={setActiveFilter}
+            />
           </Drawer>
         </Hidden>
         <Hidden smDown implementation="css">
@@ -70,11 +75,10 @@ const CardPage = (props) => {
             }}
             variant="permanent"
             open>
-            {/* <DrawerComponent
-              activeFilter={activeFilter}
-              setActiveFilter={setActiveFilter}
-            /> */}
-            <p>DRAWER</p>
+            <DrawerComponent
+            // activeFilter={activeFilter}
+            // setActiveFilter={setActiveFilter}
+            />
           </Drawer>
         </Hidden>
       </nav>
