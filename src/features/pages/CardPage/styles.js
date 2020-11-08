@@ -13,10 +13,6 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   appBar: {
-    // [theme.breakpoints.up('md')]: {
-    //   width: `calc(100% - ${drawerWidth}px)`,
-    //   marginLeft: drawerWidth,
-    // },
     zIndex: 10000,
     boxShadow: 'none',
     borderBottom: '1px solid #CCC',
@@ -36,6 +32,9 @@ export const useStyles = makeStyles((theme) => ({
   content: {
     flexGrow: 1,
     padding: theme.spacing(2),
+  },
+  restaurants: {
+    padding: '20px 0',
   },
   toolbarHeader: {
     backgroundColor: '#fff',

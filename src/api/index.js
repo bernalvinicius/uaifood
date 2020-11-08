@@ -10,3 +10,11 @@ export const fetchByCity = (city) => {
     },
   });
 };
+
+export const fetchCollections = (cityId) => {
+  return axios.get(`${BASE_URL}/collections?city_id=${cityId}`, {
+    headers: {
+      'user-key': API_KEY,
+    },
+  });
+};

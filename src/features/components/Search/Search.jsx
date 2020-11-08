@@ -8,14 +8,15 @@ import React from 'react';
 import { useStyles } from './styles';
 
 const Search = (props) => {
-  const { setSearchCity } = props;
+  const { onChange, onKeyPress } = props;
   const classes = useStyles();
 
   return (
     <Box>
       <div className={classes.search}>
         <TextField
-          onChange={(event) => setSearchCity(event.target.value)}
+          onChange={onChange}
+          onKeyPress={onKeyPress}
           placeholder="Digite a sua cidade"
           fullWidth
           focused="false"
@@ -41,7 +42,8 @@ const Search = (props) => {
 };
 
 Search.propTypes = {
-  setSearchCity: PropTypes.isRequired,
+  onChange: PropTypes.isRequired,
+  onKeyPress: PropTypes.isRequired,
 };
 
 export default Search;
