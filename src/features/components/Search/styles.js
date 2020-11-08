@@ -10,7 +10,7 @@ export const useStyles = makeStyles({
     minWidth: '100%',
     '& .MuiInput-underline:after': {
       borderBottomColor: '#fff',
-      width: '90%',
+      width: '100%',
     },
     '& label.Mui-focused': {
       color: '#767676',
@@ -20,7 +20,6 @@ export const useStyles = makeStyles({
     color: '#767676',
     fontSize: '24px',
     fontWeight: 300,
-    height: '30px',
   },
   inputLabel: {
     color: '#767676',

@@ -6,9 +6,11 @@ import Toolbar from '@material-ui/core/Toolbar';
 import { useTheme } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import PropTypes from 'prop-types';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
+import { fetchByCity } from '../../../api/index';
 import logoRed from '../../../assets/images/logo-red.jpg';
+import Button from '../../components/Button';
 import DrawerComponent from '../../components/DrawerComponent';
 import Search from '../../components/Search';
 // import Card from './components/Card';
@@ -24,6 +26,12 @@ const CardPage = (props) => {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
+
+  useEffect(() => {
+    fetchByCity('São Paulo').then((seila) => {
+      console.log('response: ', seila);
+    });
+  });
 
   const container =
     window !== undefined ? () => window().document.body : undefined;
@@ -43,8 +51,13 @@ const CardPage = (props) => {
           <div className={classes.logoDiv}>
             <img className={classes.logo} src={logoRed} alt="uaifood" />
           </div>
-          <div className={classes.divSearch}>
-            <Search className={classes.search} />
+          <div className={classes.divHeader}>
+            <div className={classes.divSearch}>
+              <Search className={classes.search} />
+            </div>
+            <div className={classes.buttonCpt}>
+              <Button />
+            </div>
           </div>
         </Toolbar>
       </AppBar>

@@ -13,20 +13,25 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   appBar: {
-    [theme.breakpoints.up('md')]: {
-      width: `calc(100% - ${drawerWidth}px)`,
-      marginLeft: drawerWidth,
-    },
+    // [theme.breakpoints.up('md')]: {
+    //   width: `calc(100% - ${drawerWidth}px)`,
+    //   marginLeft: drawerWidth,
+    // },
     zIndex: 10000,
+    boxShadow: 'none',
+    borderBottom: '1px solid #CCC',
   },
   menuButton: {
     [theme.breakpoints.up('md')]: {
       display: 'none',
     },
+    marginLeft: '-20px',
   },
   toolbar: theme.mixins.toolbar,
   drawerPaper: {
     width: drawerWidth,
+    backgroundColor: '#fafafa',
+    borderRight: 'none',
   },
   content: {
     flexGrow: 1,
@@ -34,6 +39,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   toolbarHeader: {
     backgroundColor: '#fff',
+    height: '70px',
   },
   toolbarTitle: {
     color: '#6c7680',
@@ -47,11 +53,38 @@ export const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     height: 'min-content',
     width: '100%',
-    maxWidth: '70px',
+    maxWidth: '0px',
+
+    '@media (min-width: 576px)': {
+      maxWidth: '70px',
+      marginRight: '10px',
+      marginTop: '5px',
+    },
+  },
+  buttonCpt: {
+    display: 'none',
+
+    '@media (min-width: 768px)': {
+      display: 'block',
+      marginLeft: '15px',
+    },
   },
   logo: {
     width: '100%',
   },
-  divSearch: {},
+  divSearch: {
+    border: '1px solid #CCC',
+    width: '100%',
+    maxWidth: '900px',
+  },
+  divHeader: {
+    width: '100%',
+    '@media (min-width: 768px)': {
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+  },
   search: {},
 }));

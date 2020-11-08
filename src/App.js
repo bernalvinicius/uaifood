@@ -22,7 +22,7 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Uaifood />;
+      <Uaifood />
     </ThemeProvider>
   );
 };

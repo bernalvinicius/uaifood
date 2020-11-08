@@ -24,42 +24,50 @@ const Drawer = () => {
 
   return (
     <div className={classes.root}>
-      <div>
-        <div className={classes.divTitle}>
-          <span className={classes.title}>NOTA:</span>
-        </div>
-        {stars.map((_val, idx) => (
-          <ListItem className={classes.itemList} button key={_val}>
-            <Checkbox size="small" />
-            <Stars number={idx + 1} />
-          </ListItem>
-        ))}
-      </div>
-      <div>
-        <div className={classes.divSTitle}>
-          <span className={classes.title}>CUSTO PARA 2 PESSOAS:</span>
-        </div>
-        <List className={classes.list}>
-          {prices.map((item) => (
-            <ListItem className={classes.itemList} button key={item.id}>
-              <Checkbox size="small" />
-              <ListItemText className={classes.itemName} primary={item.name} />
-            </ListItem>
-          ))}
-        </List>
-      </div>
-      <div>
+      <div className={classes.contentDrawer}>
         <div>
-          <span className={classes.title}>TIPO DE COZINHA:</span>
-        </div>
-        <List className={classes.list}>
-          {country.map((item) => (
-            <ListItem className={classes.itemList} button key={item.id}>
+          <div className={classes.divTitle}>
+            <span className={classes.title}>NOTA:</span>
+          </div>
+          {stars.map((_val, idx) => (
+            <ListItem className={classes.itemList} button key={_val}>
               <Checkbox size="small" />
-              <ListItemText className={classes.itemName} primary={item.name} />
+              <Stars number={idx + 1} />
             </ListItem>
           ))}
-        </List>
+        </div>
+        <div>
+          <div className={classes.divSTitle}>
+            <span className={classes.title}>CUSTO PARA 2 PESSOAS:</span>
+          </div>
+          <List className={classes.list}>
+            {prices.map((item) => (
+              <ListItem className={classes.itemList} button key={item.id}>
+                <Checkbox size="small" />
+                <ListItemText
+                  className={classes.itemName}
+                  primary={item.name}
+                />
+              </ListItem>
+            ))}
+          </List>
+        </div>
+        <div>
+          <div>
+            <span className={classes.title}>TIPO DE COZINHA:</span>
+          </div>
+          <List className={classes.list}>
+            {country.map((item) => (
+              <ListItem className={classes.itemList} button key={item.id}>
+                <Checkbox size="small" />
+                <ListItemText
+                  className={classes.itemName}
+                  primary={item.name}
+                />
+              </ListItem>
+            ))}
+          </List>
+        </div>
       </div>
     </div>
   );

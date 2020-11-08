@@ -16,17 +16,21 @@ const Search = (props) => {
       <div className={classes.search}>
         <TextField
           onChange={(event) => setSearchCity(event.target.value)}
-          label="Digite a sua cidade"
+          placeholder="Digite a sua cidade"
           fullWidth
+          focused="false"
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
                 <RoomIcon />
               </InputAdornment>
             ),
+            focused: false,
             className: classes.inputContent,
           }}
           InputLabelProps={{
+            shrink: false,
+            focused: false,
             className: classes.inputLabel,
           }}
           className={classes.input}
