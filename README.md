@@ -7,7 +7,7 @@
 ## Why?
 
 
-This project is part of the selection process for Front-End Developer sent by PresentEvnts.
+This project is part of the selection process for Front-End Developer sent by Evnts.
 
 
 The challenge is to make a project that simulates the iFood system. As much as possible, I tried to be faithful to the design provided.
