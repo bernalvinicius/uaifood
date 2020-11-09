@@ -8,11 +8,6 @@ import './App.css';
 
 const App = () => {
   const theme = createMuiTheme({
-    breakpoints: {
-      values: {
-        md: 1024,
-      },
-    },
     palette: {
       primary: {
         main: '#39B54A',

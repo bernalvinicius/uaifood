@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import logoWhite from '../../../assets/images/logo-white.jpg';
 import Button from '../../components/Button';
@@ -9,7 +10,15 @@ const HomePage = () => {
   const classes = useStyles();
   const [searchCity, setSearchCity] = useState([]);
 
-  console.log('searchCity: ', searchCity);
+  const handleSearch = (event) => {
+    setSearchCity(event.target.value);
+  };
+
+  const handlePress = (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+    }
+  };
 
   return (
     <div className={classes.container}>
@@ -25,9 +34,19 @@ const HomePage = () => {
         </div>
         <div className={classes.searchBtn}>
           <div className={classes.divSearch}>
-            <Search setSearchCity={setSearchCity} />
+            <Search
+              onChange={handleSearch}
+              value={searchCity}
+              onKeyPress={handlePress}
+            />
           </div>
-          <Button />
+          <Link
+            style={{
+              textDecoration: 'none',
+            }}
+            to={{ pathname: '/card', state: searchCity }}>
+            <Button />
+          </Link>
         </div>
       </div>
     </div>

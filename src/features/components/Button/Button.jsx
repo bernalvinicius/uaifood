@@ -5,12 +5,13 @@ import React from 'react';
 import { useStyles } from './styles';
 
 const ButtonCpt = (props) => {
-  const { onClick } = props;
+  const { disabled, onClick } = props;
   const classes = useStyles();
   return (
     <Button
       onClick={onClick}
       className={classes.container}
+      disabled={disabled}
       variant="contained"
       color="primary">
       BUSCAR
@@ -19,6 +20,7 @@ const ButtonCpt = (props) => {
 };
 
 ButtonCpt.propTypes = {
+  disabled: PropTypes.isRequired,
   onClick: PropTypes.isRequired,
 };
 

@@ -8,7 +8,7 @@ import React from 'react';
 import { useStyles } from './styles';
 
 const Search = (props) => {
-  const { onChange, onKeyPress } = props;
+  const { onChange, onKeyPress, value } = props;
   const classes = useStyles();
 
   return (
@@ -16,6 +16,7 @@ const Search = (props) => {
       <div className={classes.search}>
         <TextField
           onChange={onChange}
+          value={value}
           onKeyPress={onKeyPress}
           placeholder="Digite a sua cidade"
           fullWidth
@@ -44,6 +45,7 @@ const Search = (props) => {
 Search.propTypes = {
   onChange: PropTypes.isRequired,
   onKeyPress: PropTypes.isRequired,
+  value: PropTypes.isRequired,
 };
 
 export default Search;

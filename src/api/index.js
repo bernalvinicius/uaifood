@@ -12,7 +12,7 @@ export const fetchByCity = (city) => {
 };
 
 export const fetchCollections = (cityId) => {
-  return axios.get(`${BASE_URL}/collections?city_id=${cityId}`, {
+  return axios.get(`${BASE_URL}/search?entity_id=${cityId}&entity_type=city`, {
     headers: {
       'user-key': API_KEY,
     },

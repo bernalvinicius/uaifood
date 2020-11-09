@@ -7,7 +7,7 @@ export const useStyles = makeStyles({
   },
   title: {
     fontSize: '18px',
-    fontWeight: 400,
+    fontWeight: 500,
     color: '#484848',
   },
 });

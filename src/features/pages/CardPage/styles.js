@@ -68,6 +68,14 @@ export const useStyles = makeStyles((theme) => ({
       marginLeft: '15px',
     },
   },
+  divIconButton: {
+    display: 'block',
+
+    '@media (min-width: 768px)': {
+      display: 'none',
+      marginLeft: '15px',
+    },
+  },
   logo: {
     width: '100%',
   },
@@ -78,12 +86,18 @@ export const useStyles = makeStyles((theme) => ({
   },
   divHeader: {
     width: '100%',
-    '@media (min-width: 768px)': {
-      display: 'flex',
-      flexDirection: 'row',
-      justifyContent: 'center',
-      alignItems: 'center',
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+
+    '@media (min-width: 1220px)': {
+      justifyContent: 'flex-end',
     },
   },
   search: {},
+  iconButton: {
+    backgroundColor: '#39b54a',
+    marginLeft: '10px',
+    color: '#fff',
+  },
 }));
